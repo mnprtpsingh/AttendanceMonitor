@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Attendance Monitor</string>
+
+    <!-- Category name for the tool attendance monitor [CHAR LIMIT=20] -->
+    <string name="category_monitor">Monitor</string>
+</resources>
