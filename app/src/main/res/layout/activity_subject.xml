@@ -2,13 +2,14 @@
 
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical"
-              android:padding="16dp"
-              tools:context="com.example.pratap.attendancemonitor.SubjectActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.example.pratap.attendancemonitor.SubjectActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,48 +22,35 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="1"
                 android:text="Subject :"
-                android:textSize="24sp"
-                android:textStyle="bold"/>
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:hint="Enter Name"
                 android:inputType="text"
                 android:padding="4dp"
-                android:textSize="24sp"/>
+                android:textSize="24sp" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:text="No. of Classes on :"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="6dp"/>
-
-        </LinearLayout>
+            android:layout_marginTop="16dp"
+            android:text="Number of Classes on :"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -72,119 +60,117 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_weight="1"
+                    android:layout_weight="4"
                     android:text="Monday :"
-                    android:textSize="18sp"
-                    android:textStyle="bold"/>
+                    android:textSize="18sp" />
 
                 <EditText
+                    android:id="@+id/mon"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
                     android:inputType="number"
-                    android:textSize="24sp"
-                    android:id="@+id/mon"/>
+                    android:padding="4dp"
+                    android:textSize="24sp" />
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_weight="1"
+                    android:layout_weight="4"
                     android:text="Tuesday :"
-                    android:textSize="18sp"
-                    android:textStyle="bold"/>
+                    android:textSize="18sp" />
 
                 <EditText
+                    android:id="@+id/tues"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
                     android:inputType="number"
-                    android:textSize="24sp"
-                    android:id="@+id/tues"/>
+                    android:padding="4dp"
+                    android:textSize="24sp" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_weight="1"
+                    android:layout_weight="4"
                     android:text="Wednesday :"
-                    android:textSize="18sp"
-                    android:textStyle="bold"/>
+                    android:textSize="18sp" />
 
                 <EditText
+                    android:id="@+id/wed"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
                     android:inputType="number"
-                    android:textSize="24sp"
-                    android:id="@+id/wed"/>
+                    android:padding="4dp"
+                    android:textSize="24sp" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_weight="1"
+                    android:layout_weight="4"
                     android:text="Thursday :"
-                    android:textSize="18sp"
-                    android:textStyle="bold"/>
+                    android:textSize="18sp" />
 
                 <EditText
+                    android:id="@+id/thurs"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
                     android:inputType="number"
-                    android:textSize="24sp"
-                    android:id="@+id/thurs"/>
+                    android:padding="4dp"
+                    android:textSize="24sp" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_weight="1"
+                    android:layout_weight="4"
                     android:text="Friday :"
-                    android:textStyle="bold"
-
-                    android:textSize="18sp"/>
+                    android:textSize="18sp" />
 
                 <EditText
+                    android:id="@+id/fri"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
                     android:inputType="number"
-                    android:textSize="24sp"
-                    android:id="@+id/fri"/>
+                    android:padding="4dp"
+                    android:textSize="24sp" />
             </LinearLayout>
         </LinearLayout>
 
