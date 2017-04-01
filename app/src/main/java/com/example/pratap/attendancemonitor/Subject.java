@@ -5,45 +5,40 @@ package com.example.pratap.attendancemonitor;
  */
 
 public class Subject {
-    private int mP;
-    private int mA;
-    private String mSubject;
-    //empty constructor
-    public Subject(){}
 
-    //constructor
-    public Subject(int P, int A,String Sub)
-    {
-        this.mP=P;
-        this.mA=A;
-        this.mSubject=Sub;
+    private String mName;
+    private int mPresent = 0;
+    private int mAbsent = 0;
+    private int mMonday;
+    private int mTuesday;
+    private int mWednesday;
+    private int mThursday;
+    private int mFriday;
+
+    public Subject(String Name, int monday, int tuesday, int wednesday, int thursday, int friday) {
+        mName = Name;
+        mMonday = monday;
+        mTuesday = tuesday;
+        mWednesday = wednesday;
+        mThursday = thursday;
+        mFriday = friday;
     }
 
-    public int getmP(){
-        return this.mP;
+    public String getName() {
+        return mName;
     }
 
-    public void SetmP(int P)
-    {
-        this.mP=P;
-    }
-    public int getmA(){
-        return this.mA;
-    }
+    public int getMonday() { return mMonday; }
 
-    public void SetmA(int A)
-    {
-        this.mA=A;
-    }
-    public String getmSubject(){
-        return this.mSubject;
-    }
+    public int getTuesday() { return mTuesday; }
 
-    public void SetSubject(String Sub)
-    {
-        this.mSubject=Sub;
-    }
+    public int getWednesday() { return mWednesday; }
 
+    public int getThursday() { return mThursday; }
 
+    public int getFriday() { return mFriday; }
 
+    public int getPresent() { return mPresent; }
+
+    public int getAbsent() { return mAbsent; }
 }

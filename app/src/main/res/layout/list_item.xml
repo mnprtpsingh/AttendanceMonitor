@@ -8,22 +8,23 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
 
-            <EditText
-                android:id="@+id/subjectname"
+            <TextView
+                android:id="@+id/tv_name_lable"
                 android:layout_height="wrap_content"
                 android:layout_width="0dp"
                 android:layout_weight="10"
                 android:text="SubjectName :"
+                android:textSize="24sp"
                 android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/im1"
+                android:id="@+id/icon_edit"
                 android:layout_height="wrap_content"
                 android:layout_width="0dp"
-                android:layout_weight="1"
-                android:src="@drawable/draw" />
+                android:layout_weight="1" />
     </LinearLayout>
 
     <LinearLayout
@@ -32,48 +33,44 @@
 
         <TextView
             android:layout_height="match_parent"
+            android:layout_width="0dp"
             android:layout_weight="1"
-            android:padding="15dp"
             android:text="P="
             android:textSize="20sp"
             android:textStyle="italic" />
 
         <EditText
-            android:id="@+id/edit1"
+            android:id="@+id/tv_present"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="15dp"
+            android:layout_weight="2"
+            android:padding="4dp"
             android:textStyle="bold" />
 
         <TextView
             android:layout_height="match_parent"
+            android:layout_width="0dp"
             android:layout_weight="1"
-            android:padding="15dp"
             android:text="A="
             android:textSize="20sp"
             android:textStyle="italic" />
 
         <EditText
-            android:id="@+id/edit2"
+            android:id="@+id/tv_absent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="15dp"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:padding="4dp"
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/tv_percent_attendance"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="15dp"
-            android:text="%="
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:text=" % Attendance"
             android:textSize="20sp"
             android:textStyle="italic" />
-
-        <EditText
-            android:id="@+id/edit3"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="15dp"
-            android:textStyle="bold" />
     </LinearLayout>
 
     <Button
@@ -81,7 +78,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Mark Attendance"
-        android:layout_marginBottom="8dp"/>
+        android:textSize="18sp"
+        android:layout_margin="8dp"/>
 
 </LinearLayout>
 
