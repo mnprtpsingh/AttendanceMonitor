@@ -10,8 +10,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CursorAdapter;
+import android.widget.TextView;
 
 import com.example.pratap.attendancemonitor.data.SubjectContract.SubjectEntry;
+
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 
 /**
  * Created by pratap on 2/4/17.
@@ -59,18 +62,25 @@ public class AttendanceCursorAdapter extends CursorAdapter {
         Button absentButton = (Button) view.findViewById(R.id.button_absent);
         Button holidayButton = (Button) view.findViewById(R.id.button_holiday);
 
-
         // Find the columns of subject attributes that we're interested in
         final int idColumnIndex = cursor.getColumnIndex(SubjectEntry._ID);
         int presentColumnIndex = cursor.getColumnIndex(SubjectEntry.COLUMN_NUMBER_OF_DAYS_PRESENT);
         int absentColumnIndex = cursor.getColumnIndex(SubjectEntry.COLUMN_NUMBER_OF_DAYS_ABSENT);
+        int mondayColumnIndex = cursor.getColumnIndex(SubjectEntry.COLUMN_NUMBER_OF_PERIODS_ON_MONDAY);
+        int tuesdayColumnIndex = cursor.getColumnIndex(SubjectEntry.COLUMN_NUMBER_OF_PERIODS_ON_TUESDAY);
+        int wednesdayColumnIndex = cursor.getColumnIndex(SubjectEntry.COLUMN_NUMBER_OF_PERIODS_ON_WEDNESDAY);
+        int thursdayColumnIndex = cursor.getColumnIndex(SubjectEntry.COLUMN_NUMBER_OF_PERIODS_ON_THURSDAY);
+        int fridayColumnIndex = cursor.getColumnIndex(SubjectEntry.COLUMN_NUMBER_OF_PERIODS_ON_FRIDAY);
+        int dateColumnIndex = cursor.getColumnIndex(SubjectEntry.COLUMN_LAST_DATE);
 
         // Read the subject attributes from the Cursor for the current subject
         final long id = cursor.getLong(idColumnIndex);
         int present = cursor.getInt(presentColumnIndex);
         int absent = cursor.getInt(absentColumnIndex);
-
-        // Update the TextViews with the attributes for the current subject
-        String percentAttendence = " % Attendance";
+        int monday = cursor.getInt(mondayColumnIndex);
+        int tuesday = cursor.getInt(tuesdayColumnIndex);
+        int wednesday = cursor.getInt(wednesdayColumnIndex);
+        int thursday = cursor.getInt(thursdayColumnIndex);
+        int friday = cursor.getInt(fridayColumnIndex);
     }
 }

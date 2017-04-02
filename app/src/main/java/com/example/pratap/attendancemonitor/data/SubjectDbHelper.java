@@ -49,7 +49,8 @@ public class SubjectDbHelper extends SQLiteOpenHelper {
                 + SubjectEntry.COLUMN_NUMBER_OF_PERIODS_ON_THURSDAY + " INTEGER NOT NULL DEFAULT 0, "
                 + SubjectEntry.COLUMN_NUMBER_OF_PERIODS_ON_FRIDAY + " INTEGER NOT NULL DEFAULT 0, "
                 + SubjectEntry.COLUMN_NUMBER_OF_DAYS_PRESENT + " INTEGER DEFAULT 0, "
-                + SubjectEntry.COLUMN_NUMBER_OF_DAYS_ABSENT + " INTEGER DEFAULT 0);";
+                + SubjectEntry.COLUMN_NUMBER_OF_DAYS_ABSENT + " INTEGER DEFAULT 0, "
+                + SubjectEntry.COLUMN_LAST_DATE + " TEXT);";
 
         // Execute the SQL statement
         db.execSQL(SQL_CREATE_SUBJECTS_TABLE);

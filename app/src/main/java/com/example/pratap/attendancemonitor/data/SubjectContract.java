@@ -78,6 +78,7 @@ public final class SubjectContract {
         public final static String COLUMN_NUMBER_OF_PERIODS_ON_FRIDAY ="friday";
         public final static String COLUMN_NUMBER_OF_DAYS_PRESENT ="present";
         public final static String COLUMN_NUMBER_OF_DAYS_ABSENT ="absent";
+        public final static String COLUMN_LAST_DATE ="date";
     }
 
 
