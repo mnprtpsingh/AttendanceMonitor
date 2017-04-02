@@ -1,10 +1,12 @@
 package com.example.pratap.attendancemonitor;
 
 import android.app.LoaderManager;
+import android.content.ContentUris;
 import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
+import android.net.Uri;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,6 +14,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.example.pratap.attendancemonitor.data.SubjectContract.SubjectEntry;
@@ -36,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), SubjectActivity.class);
+                Intent intent = new Intent(MainActivity.this, SubjectActivity.class);
                 startActivity(intent);
             }
         });
@@ -53,6 +56,28 @@ public class MainActivity extends AppCompatActivity implements
         mCursorAdapter = new MonitorCursorAdapter(this, null);
         subjectListView.setAdapter(mCursorAdapter);
 
+        // Setup the item click listener
+        subjectListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                // Create new intent to go to {@link SubjectActivity}
+                Intent intent = new Intent(MainActivity.this, SubjectActivity.class);
+
+                // Form the content URI that represents the specific pet that was clicked on,
+                // by appending the "id" (passed as input to this method) onto the
+                // {@link SubjectEntry#CONTENT_URI}.
+                // For example, the URI would be "content://com.example.pratap.attendancemonitor/subjects/2"
+                // if the pet with ID 2 was clicked on.
+                Uri currentSubjectUri = ContentUris.withAppendedId(SubjectEntry.CONTENT_URI, id);
+
+                // Set the URI on the data field of the intent
+                intent.setData(currentSubjectUri);
+
+                // Launch the {@link EditorActivity} to display the data for the current pet.
+                startActivity(intent);
+            }
+        });
+
         // Kick off the loader
         getLoaderManager().initLoader(SUBJECT_LOADER, null, this);
     }
@@ -60,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements
     /**
      * Helper method to delete all pets in the database.
      */
-    private void deleteAllPets() {
+    private void deleteAllSubjects() {
         int rowsDeleted = getContentResolver().delete(SubjectEntry.CONTENT_URI, null, null);
         Log.v("MainActivity", rowsDeleted + " rows deleted from monitor database");
     }
@@ -79,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements
         switch (item.getItemId()) {
             // Respond to a click on the "Delete all entries" menu option
             case R.id.action_delete_all_entries:
-                deleteAllPets();
+                deleteAllSubjects();
                 return true;
         }
         return super.onOptionsItemSelected(item);
@@ -90,6 +115,7 @@ public class MainActivity extends AppCompatActivity implements
         // Define a projection that specifies the columns from the table we care about.
         String[] projection = {
                 SubjectEntry._ID,
+                SubjectEntry.COLUMN_SUBJECT_NAME,
                 SubjectEntry.COLUMN_NUMBER_OF_DAYS_PRESENT,
                 SubjectEntry.COLUMN_NUMBER_OF_DAYS_ABSENT };
 

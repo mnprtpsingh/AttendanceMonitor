@@ -15,8 +15,6 @@ import android.util.Log;
 
 import com.example.pratap.attendancemonitor.data.SubjectContract.SubjectEntry;
 
-import java.security.Provider;
-
 /**
  * {@link ContentProvider} for Attendance Monitor app.
  */
@@ -47,7 +45,7 @@ public class SubjectProvider extends ContentProvider {
         // The content URI of the form "content://com.example.pratap.attendancemonitor/attendancemonitor"
         // will map to the integer code {@link #SUBJECTS}. This URI is used to provide access to MULTIPLE rows
         // of the subjects table.
-        sUriMatcher.addURI(SubjectContract.CONTENT_AUTHORITY, SubjectContract.PATH_PETS, SUBJECTS);
+        sUriMatcher.addURI(SubjectContract.CONTENT_AUTHORITY, SubjectContract.PATH_SUBJECTS, SUBJECTS);
 
         // The content URI of the form "content://com.example.pratap.attendancemonitor/attendancemonitor/#"
         // will map to the integer code {@link #SUBJECT_ID}. This URI is used to provide access to ONE single row
@@ -57,7 +55,7 @@ public class SubjectProvider extends ContentProvider {
         // For example, "content://com.example.pratap.attendancemonitor/attendancemonitor/3" matches, but
         // "content://com.example.pratap.attendancemonitor/attendancemonitor" (without a number at the end)
         // doesn't match.
-        sUriMatcher.addURI(SubjectContract.CONTENT_AUTHORITY, SubjectContract.PATH_PETS + "/#", SUBJECT_ID);
+        sUriMatcher.addURI(SubjectContract.CONTENT_AUTHORITY, SubjectContract.PATH_SUBJECTS + "/#", SUBJECT_ID);
     }
 
     /** Database helper object */
