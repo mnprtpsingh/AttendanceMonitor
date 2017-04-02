@@ -8,7 +8,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:label="@string/category_monitor">
         </activity>
 
@@ -24,16 +25,20 @@
 
         <activity
             android:name=".SubjectActivity"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName=".MainActivity">
+
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
+
         <provider
             android:name=".data.SubjectProvider"
             android:authorities="com.example.pratap.attendancemonitor"
             android:exported="false" />
+
+        <activity android:name=".AttendanceActivity"></activity>
     </application>
 
 </manifest>

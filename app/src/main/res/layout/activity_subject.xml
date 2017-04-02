@@ -6,9 +6,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/darker_gray"
     android:orientation="vertical"
     android:padding="16dp"
+
     tools:context="com.example.pratap.attendancemonitor.SubjectActivity">
 
     <LinearLayout
@@ -16,37 +16,24 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <LinearLayout
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:text="Subject :"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+            android:layout_height="wrap_content">
 
             <EditText
                 android:id="@+id/tv_name"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:hint="Enter Name"
-                android:inputType="text"
-                android:padding="4dp"
-                android:textSize="24sp" />
-        </LinearLayout>
+                android:hint="Subject Name" />
+        </android.support.design.widget.TextInputLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Number of Classes on :"
-            android:textSize="16sp" />
+            android:textSize="18sp"
+            android:textStyle="italic"/>
     </LinearLayout>
 
     <ScrollView
@@ -58,121 +45,61 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="4"
-                    android:text="Monday :"
-                    android:textSize="18sp" />
+                android:layout_height="wrap_content">
 
                 <EditText
                     android:id="@+id/tv_monday"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:inputType="number"
-                    android:padding="4dp"
-                    android:textSize="24sp" />
+                    android:hint="Monday" />
 
-            </LinearLayout>
+            </android.support.design.widget.TextInputLayout>
 
-            <LinearLayout
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="4"
-                    android:text="Tuesday :"
-                    android:textSize="18sp" />
+                android:layout_height="wrap_content">
 
                 <EditText
                     android:id="@+id/tv_tuesday"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:inputType="number"
-                    android:padding="4dp"
-                    android:textSize="24sp" />
-            </LinearLayout>
+                    android:hint="Tuesday" />
+            </android.support.design.widget.TextInputLayout>
 
-            <LinearLayout
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="4"
-                    android:text="Wednesday :"
-                    android:textSize="18sp" />
+                android:layout_height="wrap_content">
 
                 <EditText
                     android:id="@+id/tv_wednesday"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:inputType="number"
-                    android:padding="4dp"
-                    android:textSize="24sp" />
-            </LinearLayout>
+                    android:hint="Wednesday" />
+            </android.support.design.widget.TextInputLayout>
 
-            <LinearLayout
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="4"
-                    android:text="Thursday :"
-                    android:textSize="18sp" />
+                android:layout_height="wrap_content">
 
                 <EditText
                     android:id="@+id/tv_thursday"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:inputType="number"
-                    android:padding="4dp"
-                    android:textSize="24sp" />
-            </LinearLayout>
+                    android:hint="Thursday" />
+            </android.support.design.widget.TextInputLayout>
 
-            <LinearLayout
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="4"
-                    android:text="Friday :"
-                    android:textSize="18sp" />
+                android:layout_height="wrap_content">
 
                 <EditText
                     android:id="@+id/tv_friday"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:inputType="number"
-                    android:padding="4dp"
-                    android:textSize="24sp" />
-            </LinearLayout>
+                    android:hint="Friday" />
+            </android.support.design.widget.TextInputLayout>
         </LinearLayout>
 
     </ScrollView>
