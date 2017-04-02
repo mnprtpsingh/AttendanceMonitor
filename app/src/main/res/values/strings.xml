@@ -1,6 +1,63 @@
 <resources>
     <string name="app_name">Attendance Monitor</string>
 
+    <!-- Label for overflow menu option that deletes all subject data in the app [CHAR LIMIT=20] -->
+    <string name="action_delete_all_entries">Delete All Subjects</string>
+
     <!-- Category name for the tool attendance monitor [CHAR LIMIT=20] -->
     <string name="category_monitor">Monitor</string>
+
+    <!-- Title for the activity to add a new subject [CHAR LIMIT=20] -->
+    <string name="subject_activity_title_new_subject">Add a Subject</string>
+
+    <!-- Title for the activity to edit an existing pet [CHAR LIMIT=20] -->
+    <string name="subject_activity_title_edit_subject">Edit Subject</string>
+
+    <!-- Title text for the empty view, which describes the empty house image [CHAR LIMIT=50] -->
+    <string name="empty_view_title_text">It\'s a bit lonely here..</string>
+
+    <!-- Subtitle text for the empty view that prompts the user to add a subject [CHAR LIMIT=50] -->
+    <string name="empty_view_subtitle_text">Get started by adding a subject</string>
+
+    <!-- Label for subject menu option to save subject and leave editor [CHAR LIMIT=20] -->
+    <string name="action_save">Save</string>
+
+    <!-- Label for subject overflow menu option that deletes the current subject [CHAR LIMIT=20] -->
+    <string name="action_delete">Delete</string>
+
+    <!-- Toast message in editor when new subject has been successfully inserted [CHAR LIMIT=NONE] -->
+    <string name="insert_subject_successful">Subject saved</string>
+
+    <!-- Toast message in editor when new subject has failed to be inserted [CHAR LIMIT=NONE] -->
+    <string name="insert_subject_failed">Error with saving subject</string>
+
+    <!-- Toast message in editor when current subject was successfully updated [CHAR LIMIT=NONE] -->
+    <string name="update_subject_successful">Subject updated</string>
+
+    <!-- Toast message in editor when current subject has failed to be updated [CHAR LIMIT=NONE] -->
+    <string name="update_subject_failed">Error with updating subject</string>
+
+    <!-- Dialog message when user is leaving editor but hasn't saved changes [CHAR LIMIT=NONE] -->
+    <string name="unsaved_changes_dialog_msg">Discard your changes and quit editing?</string>
+
+    <!-- Dialog button text for the option to discard a user's changes [CHAR LIMIT=20] -->
+    <string name="discard">Discard</string>
+
+    <!-- Dialog button text for the option to keep editing the current subject [CHAR LIMIT=20] -->
+    <string name="keep_editing">Keep Editing</string>
+
+    <!-- Toast message in editor when current subject was successfully deleted [CHAR LIMIT=NONE] -->
+    <string name="delete_subject_successful">Subject deleted</string>
+
+    <!-- Toast message in editor when current subject has failed to be deleted [CHAR LIMIT=NONE] -->
+    <string name="delete_subject_failed">Error with deleting subject</string>
+
+    <!-- Dialog message to ask the user to confirm deleting the current subject [CHAR LIMIT=NONE] -->
+    <string name="delete_dialog_msg">Delete this subject?</string>
+
+    <!-- Dialog button text for the option to confirm deleting the current subject [CHAR LIMIT=20] -->
+    <string name="delete">Delete</string>
+
+    <!-- Dialog button text for the option to cancel deletion of the current subject [CHAR LIMIT=20] -->
+    <string name="cancel">Cancel</string>
 </resources>

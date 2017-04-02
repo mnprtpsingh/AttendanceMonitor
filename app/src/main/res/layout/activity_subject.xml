@@ -31,6 +31,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/tv_name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
@@ -71,7 +72,7 @@
                     android:textSize="18sp" />
 
                 <EditText
-                    android:id="@+id/mon"
+                    android:id="@+id/tv_monday"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
@@ -95,7 +96,7 @@
                     android:textSize="18sp" />
 
                 <EditText
-                    android:id="@+id/tues"
+                    android:id="@+id/tv_tuesday"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
@@ -118,7 +119,7 @@
                     android:textSize="18sp" />
 
                 <EditText
-                    android:id="@+id/wed"
+                    android:id="@+id/tv_wednesday"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
@@ -141,7 +142,7 @@
                     android:textSize="18sp" />
 
                 <EditText
-                    android:id="@+id/thurs"
+                    android:id="@+id/tv_thursday"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
@@ -164,7 +165,7 @@
                     android:textSize="18sp" />
 
                 <EditText
-                    android:id="@+id/fri"
+                    android:id="@+id/tv_friday"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
