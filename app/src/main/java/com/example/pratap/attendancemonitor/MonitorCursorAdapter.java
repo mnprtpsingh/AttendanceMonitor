@@ -64,6 +64,7 @@ public class MonitorCursorAdapter extends CursorAdapter {
         TextView absentTextView = (TextView) view.findViewById(R.id.tv_absent);
         TextView percentTextView = (TextView) view.findViewById(R.id.tv_percent_attendance);
 
+
         // Find the columns of subject attributes that we're interested in
         int nameColumnIndex = cursor.getColumnIndex(SubjectEntry.COLUMN_SUBJECT_NAME);
         int presentColumnIndex = cursor.getColumnIndex(SubjectEntry.COLUMN_NUMBER_OF_DAYS_PRESENT);
