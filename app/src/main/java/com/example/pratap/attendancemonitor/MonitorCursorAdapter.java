@@ -93,7 +93,9 @@ public class MonitorCursorAdapter extends CursorAdapter {
         nameTextView.setText(Name);
         presentTextView.setText(String.valueOf(present));
         absentTextView.setText(String.valueOf(absent));
-        String percentAttendence = " % Attendance";
+
+        int percent = (present / (present + absent)) * 100;
+        String percentAttendence = percent + "% Attendance";
         percentTextView.setText(percentAttendence);
 
         editImageView.setOnClickListener(new View.OnClickListener() {
