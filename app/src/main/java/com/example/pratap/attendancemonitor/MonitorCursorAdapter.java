@@ -12,6 +12,7 @@ import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CursorAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -26,6 +27,7 @@ import com.example.pratap.attendancemonitor.data.SubjectContract.SubjectEntry;
 public class MonitorCursorAdapter extends CursorAdapter {
 
     private Context mContext;
+
     /**
      * Constructs a new {@link MonitorCursorAdapter}.
      *
@@ -73,6 +75,7 @@ public class MonitorCursorAdapter extends CursorAdapter {
         TextView absentTextView = (TextView) view.findViewById(R.id.tv_absent);
         TextView percentTextView = (TextView) view.findViewById(R.id.tv_percent_attendance);
         ImageView editImageView = (ImageView) view.findViewById(R.id.icon_edit);
+        Button markAttendanceButton = (Button) view.findViewById(R.id.mark_attendance);
 
         // Find the columns of subject attributes that we're interested in
         final int idColumnIndex = cursor.getColumnIndex(SubjectEntry._ID);
@@ -92,6 +95,7 @@ public class MonitorCursorAdapter extends CursorAdapter {
         absentTextView.setText(String.valueOf(absent));
         String percentAttendence = " % Attendance";
         percentTextView.setText(percentAttendence);
+
         editImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -109,6 +113,14 @@ public class MonitorCursorAdapter extends CursorAdapter {
                 intent.setData(currentSubjectUri);
 
                 // Launch the {@link EditorActivity} to display the data for the current pet.
+                mContext.startActivity(intent);
+            }
+        });
+
+        markAttendanceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, AttendanceActivity.class);
                 mContext.startActivity(intent);
             }
         });
