@@ -17,6 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".SubjectActivity"></activity>
+        <provider
+            android:authorities="com.example.pratap.attendancemonitor"
+            android:name=".data.SubjectProvider"/>
     </application>
 
 </manifest>

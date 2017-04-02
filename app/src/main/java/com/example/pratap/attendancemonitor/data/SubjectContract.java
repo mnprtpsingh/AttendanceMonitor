@@ -80,4 +80,6 @@ public final class SubjectContract {
         public final static String COLUMN_NUMBER_OF_DAYS_ABSENT ="absent";
     }
 
+
+
 }
