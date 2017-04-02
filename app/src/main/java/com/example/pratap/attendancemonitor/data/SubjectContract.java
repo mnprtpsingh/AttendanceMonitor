@@ -37,7 +37,7 @@ public final class SubjectContract {
      * looking at subject data. content://com.example.pratap.attendancemonitor/staff/ will fail,
      * as the ContentProvider hasn't been given any information on what to do with "staff".
      */
-    public static final String PATH_PETS = "attendancemonitor";
+    public static final String PATH_SUBJECTS = "subjects";
 
     /**
      * Inner class that defines constant values for the attendancemonitor database table.
@@ -46,19 +46,19 @@ public final class SubjectContract {
     public static final class SubjectEntry implements BaseColumns {
 
         /** The content URI to access the subject data in the provider */
-        public static final Uri CONTENT_URI = Uri.withAppendedPath(BASE_CONTENT_URI, PATH_PETS);
+        public static final Uri CONTENT_URI = Uri.withAppendedPath(BASE_CONTENT_URI, PATH_SUBJECTS);
 
         /**
          * The MIME type of the {@link #CONTENT_URI} for a list of subjects.
          */
         public static final String CONTENT_LIST_TYPE =
-                ContentResolver.CURSOR_DIR_BASE_TYPE + "/" + CONTENT_AUTHORITY + "/" + PATH_PETS;
+                ContentResolver.CURSOR_DIR_BASE_TYPE + "/" + CONTENT_AUTHORITY + "/" + PATH_SUBJECTS;
 
         /**
          * The MIME type of the {@link #CONTENT_URI} for a single subject.
          */
         public static final String CONTENT_ITEM_TYPE =
-                ContentResolver.CURSOR_ITEM_BASE_TYPE + "/" + CONTENT_AUTHORITY + "/" + PATH_PETS;
+                ContentResolver.CURSOR_ITEM_BASE_TYPE + "/" + CONTENT_AUTHORITY + "/" + PATH_SUBJECTS;
 
         /** Name of database table for subjects */
         public final static String TABLE_NAME = "subjects";
