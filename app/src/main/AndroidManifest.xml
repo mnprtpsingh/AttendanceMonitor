@@ -26,13 +26,20 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
+        <activity
+            android:name=".AttendanceActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name=".AttendanceActivity"
+                android:value=".MainActivity" />
+
+        </activity>
 
         <provider
             android:name=".data.SubjectProvider"
             android:authorities="com.example.pratap.attendancemonitor"
             android:exported="false" />
 
-        <activity android:name=".AttendanceActivity"></activity>
     </application>
 
 </manifest>

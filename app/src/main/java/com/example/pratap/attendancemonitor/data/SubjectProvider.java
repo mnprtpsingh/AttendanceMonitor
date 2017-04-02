@@ -134,13 +134,13 @@ public class SubjectProvider extends ContentProvider {
     private Uri insertSubject(Uri uri, ContentValues values) {
         // Check that the name is not null
         String name = values.getAsString(SubjectEntry.COLUMN_SUBJECT_NAME);
-        if (name == null) {
+        if (name == null  || name == "") {
             throw new IllegalArgumentException("Subject requires a name");
         }
 
         // Check that the number of periods on monday is valid
         Integer monday = values.getAsInteger(SubjectEntry.COLUMN_NUMBER_OF_PERIODS_ON_MONDAY);
-        if (monday < 0 || monday > 9) {
+        if (!(monday >= 0 || monday <= 9)) {
             throw new IllegalArgumentException("Subject requires valid number of periods");
         }
 
